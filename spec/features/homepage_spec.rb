@@ -13,5 +13,4 @@ feature "Homepage", %q{
   end
 
 
-
 end
