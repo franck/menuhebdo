@@ -11,6 +11,16 @@
     color:white;
     border-radius:10px;
 
+    #error_explanation {
+      color: red;
+      font-weight: bold;
+      ul {
+        list-style:none;
+        padding:0;
+      }
+    }
+    .field_with_errors { display:inline-block; }
+
     input#subscriber_email {
       border:none;
       padding: 3px 6px;

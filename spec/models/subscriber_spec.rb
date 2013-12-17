@@ -7,4 +7,20 @@ describe Subscriber do
     it { expect(subject.token).not_to be_nil }
   end
 
+  describe "#save" do
+    it "create a record if everything is OK" do
+      Subscriber.new(email: 'franck@example.com').should be_valid
+    end
+    it "raises an error if email is missing"  do
+      Subscriber.new(email: '').should_not be_valid
+    end
+    it "raises an error if email is invalid" do
+      Subscriber.new(email: 'franck').should_not be_valid
+    end
+    it "raises an error if email is already taken" do
+      subscriber = create(:subscriber)
+      Subscriber.new(email: subscriber.email).should_not be_valid
+    end
+  end
+
 end

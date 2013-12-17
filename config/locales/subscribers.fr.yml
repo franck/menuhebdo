@@ -1,0 +1,10 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        subscriber:
+          attributes:
+            email:
+              blank: Il manque votre adresse email
+              invalid: Cette adresse email n'est pas valide
+              taken: Cette adresse email est déjà prise

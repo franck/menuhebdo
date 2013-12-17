@@ -28,6 +28,17 @@ feature "Subscription", %q{
     end
   end
 
+  context "when I try to subsribe with a invalid email" do
+    before do
+      visit '/'
+      fill_in 'subscriber_email', with: ''
+      click_button "Je m'abonne"
+    end
+    it "raises an error" do
+      page.should have_content "Cette adresse email n'est pas valide"
+    end
+  end
+
   describe "#validation" do
     let!(:subscriber) { create(:subscriber) }
     context "when the token is good" do
