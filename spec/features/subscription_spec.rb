@@ -29,8 +29,19 @@ feature "Subscription", %q{
   end
 
   describe "#validation" do
-    context "when the token is good"
-    context "when the token is not good"
+    let!(:subscriber) { create(:subscriber) }
+    context "when the token is good" do
+      it "redirect to the thanks page" do
+        visit validation_subscribers_path(token: subscriber.token)
+        page.should have_content "Abonnement activé"
+      end
+    end
+    context "when the token is not good" do
+      it "displays an error message" do
+        visit validation_subscribers_path(token: 'wrong')
+        page.should have_content "Nous n'avons pas pu valider votre email."
+      end
+    end
   end
 
 

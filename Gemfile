@@ -9,6 +9,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 
+# correct depreciation : http://stackoverflow.com/questions/20487127/rails-i18n-validation-deprecation-warning-after-setting-enforce-available-local
+gem 'i18n', github: 'svenfuchs/i18n'
+
+
 group :development do
   gem 'thin'
   gem 'letter_opener'

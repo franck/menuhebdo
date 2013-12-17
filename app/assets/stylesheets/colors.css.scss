@@ -1,0 +1,17 @@
+$brown: #826851;
+$darkbrown: #45312b;
+$gray: #bec2be;
+$red: #9e310c;
+$beige: #d1b988;
+$kaki: #a89d77;
+
+@mixin brown-gradient {
+  background: $darkbrown; /* Old browsers */
+  background: -moz-linear-gradient(top,  $darkbrown 0%, $brown 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$darkbrown), color-stop(100%,$brown)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $darkbrown 0%,$brown 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $darkbrown 0%,$brown 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $darkbrown 0%,$brown 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $darkbrown 0%,$brown 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$darkbrown', endColorstr='$brown',GradientType=0 ); /* IE6-9 */
+}

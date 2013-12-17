@@ -1,12 +1,9 @@
-<h2>Mon menu hebdo</h2>
-
-<p>Recevez chaque semaine un menu pour la semaine</p>
-
-<%= form_for @subscriber do |f| %>
-  <%= render "/shared/error_messages", :target => @subscriber %>
-  <%= f.label :email, "Email" %>
-  <%= f.email_field :email %>
-  <%= f.submit "Je m'abonne" %>
-<% end %>
-
-
+<div id="subscription">
+  <%= form_for @subscriber do |f| %>
+    <h3>Recevez chaque semaine</h3> 
+    <h2>un menu pour la semaine</h2>
+    <%= render "/shared/error_messages", :target => @subscriber %>
+    <%= f.email_field :email, placeholder: "votre@email.com", size: 30 %>
+    <%= f.submit "Je m'abonne" %>
+  <% end %>
+</div>
