@@ -9,7 +9,7 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(params_subscriber)
     if @subscriber.save
-      #ValidationEmail.new(@subscriber.email, @subscriber.token).send
+      ValidationEmail.new(@subscriber.email, @subscriber.token).send
       redirect_to validate_subscriber_path(@subscriber)
     else
       render :new

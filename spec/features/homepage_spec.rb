@@ -9,7 +9,7 @@ feature "Homepage", %q{
   scenario "Homepage shows a teaser" do
     visit '/'
     page.should have_content "Menu hebdo"
-    page.should have_content "Recevez chaque semaine un menu pour la semaine"
+    page.should have_content "Recevez chaque dimanche un menu pour la semaine"
   end
 
 
