@@ -8,4 +8,17 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 900;
+  color:$darkbrown;
+}
+
+em {
+  font-style: normal;
+  color: $red;
+  font-weight:bold;
+}
+
+a { 
+  color:$red;
+  font-weight:bold;
+  text-decoration:none;
 }

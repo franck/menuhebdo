@@ -1,9 +1,16 @@
 <div id="subscription">
   <%= form_for @subscriber do |f| %>
-    <h3>Recevez chaque semaine</h3> 
+    <h3>Recevez chaque dimanche</h3> 
     <h2>un menu pour la semaine</h2>
     <%= render "/shared/error_messages", :target => @subscriber %>
-    <%= f.email_field :email, placeholder: "votre@email.com", size: 30 %>
+    <%= f.email_field :email, placeholder: "votre@email.com", size: 38 %>
     <%= f.submit "Je m'abonne" %>
   <% end %>
+
+  <div id="sample">
+    <a href='#'><img src='' alt="Exemple de menu" title="Exemple de menu" width="400" height="238" /></a>
+  </div>
+
 </div>
+
+<h2>A propos</h2>

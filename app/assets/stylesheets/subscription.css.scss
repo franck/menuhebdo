@@ -1,15 +1,18 @@
 #subscription {
-  margin: 150px auto;
-  width: 500px;
+  float:left;
+  width:100%;
+  margin: 30px auto;
+  background: $darkbrown;
+  color:white;
+  border-radius:10px;
 
+  h2, h3 { color:white; }
   h2 { margin:0 0 0.5em 0; font-size: 36px; }
   h3 { margin:0; font-size: 24px; }
 
   form {
-    padding: 20px 30px;
-    background: $darkbrown;
-    color:white;
-    border-radius:10px;
+    float:left;
+    padding: 60px 30px 40px;
 
     #error_explanation {
       color: red;
@@ -34,5 +37,12 @@
       line-height: 20px;
       padding: 10px 20px;
     }
+  }
+
+  #sample {
+    float:right;
+    padding: 60px 30px 0px 30px;
+    margin-bottom:-5px;
+    img { background:white; border:0; }
   }
 }

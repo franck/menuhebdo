@@ -8,11 +8,15 @@
 </head>
 <body>
   <div id="container">
-    <h1>Menu hebdo</h1>
+    <div id="header">
+      <h1><a href='/'>Menu hebdo</a></h1>
+    </div>
     <div id="main">
       <%= yield %>
     </div>
-    <div id="footer">
+  </div>
+  <div id="footer">
+    <div class='wrapper'>
       <p id="pitch">Le dimanche soir, recevez un menu pour la semaine.</p>
     </div>
   </div>
