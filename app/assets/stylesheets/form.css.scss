@@ -1,0 +1,21 @@
+form {
+  
+  div { 
+    margin-bottom:0.5em;
+  }
+
+  input {
+    display:inline-block;
+    padding: 8px;
+    border:none;
+    font-size:1.1em;
+    -webkit-transition: background ease 0.25s;
+    -moz-transition: background ease 0.25s;
+    transition: background ease 0.25s;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    border-radius: 2px;
+  }
+
+}
