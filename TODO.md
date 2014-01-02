@@ -1,5 +1,5 @@
 # TODO
 
-- Design flashbox
 - Recover password
-- Why validation email is so long (token?)
+- changer le nom des URL login et logout
+- Why validation email take so long (token?)

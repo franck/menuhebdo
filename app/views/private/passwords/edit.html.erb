@@ -1,0 +1,13 @@
+<h2>Modifier votre mot de passe</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div>
+    <%= f.password_field :password, placeholder: "Nouveau mot de passe", :autofocus => true, size: 35 %>
+    <%= f.submit "Modifier mon mot de passe" %>
+  </div>
+<% end %>
+
+<%= render "private/shared/links" %>

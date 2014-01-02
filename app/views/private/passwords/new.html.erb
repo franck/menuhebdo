@@ -1,0 +1,13 @@
+<h2>Mot de passe oublié?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div>
+    <%= f.email_field :email, placeholder: "votre@email.com", autofocus: true, size: 35 %>
+    <%= f.submit "M'envoyer les instructions" %>
+  </div>
+
+<% end %>
+
+<%= render "private/shared/links" %>
