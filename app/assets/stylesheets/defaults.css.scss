@@ -30,10 +30,10 @@ table {
     th {
       text-align:left;
       font-weight:bold;
-      border-bottom: $red 1px solid;
+      border-bottom: $red 2px solid;
     }
     td {
-
+      border-bottom: lighten($red, 50%) 1px solid;
     }
   }
 }
@@ -110,6 +110,14 @@ input[type="submit"]:active, input[type="button"]:active, .button:active {
   background: #9fbb58;
 }
 
-
+/* Pagination */
+.pagination {
+  margin:1em 0;
+  a, em, span { border:1px solid $red; padding:4px 5px; font-size:0.85em; }
+  em.current { background: $red; color:white; }
+  a { background:white; color:$red; }
+  a:hover { background:$red; color:white; }
+  span.disabled { background:white; color:#AAA; }
+}
 
 

@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'i18n', github: 'svenfuchs/i18n'
 
 gem 'devise'
+gem 'will_paginate'
 
 
 group :development do

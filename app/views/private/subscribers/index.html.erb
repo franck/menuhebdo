@@ -1,5 +1,7 @@
 <h1>Abonnés</h1>
 
+<p><%= @subscribers.total_entries %> abonnés.</p>
+
 <table>
   <tr>
     <th>Email</th>
@@ -19,3 +21,5 @@
     </tr>
   <% end %>
 </table>
+
+<%= will_paginate @subscribers %>

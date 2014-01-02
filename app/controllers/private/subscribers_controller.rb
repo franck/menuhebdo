@@ -3,7 +3,7 @@ module Private
   class SubscribersController < PrivateController
 
     def index
-      @subscribers = Subscriber.all
+      @subscribers = Subscriber.paginate(page: params[:page])
     end
 
     def edit
