@@ -12,6 +12,7 @@
     <div id="header">
       <div id="logout"><%= link_to "se deconnecter", destroy_admin_session_path, method: :delete %></div>
       <h1><a href='/'>Menu hebdo</a></h1>
+      <%= render "shared/private/navbar" %>
     </div>
     <div id="main">
       <%= yield %>

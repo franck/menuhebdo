@@ -13,6 +13,7 @@ Monmenuhebdo::Application.routes.draw do
         get :validate
       end
     end
+    resources :menus
     root to: 'subscribers#index'
   end
 

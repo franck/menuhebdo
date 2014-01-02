@@ -1,6 +1,6 @@
 # TODO
 
-- Pagination
+- Navbar
 - Menu creator
 - Email menu
 - Unscubscribe

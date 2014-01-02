@@ -1,3 +1,30 @@
-#logout {
-  float:right;
+#header {
+  padding-top:1em; padding-bottom: 1em;
+  float:left; width:100%;
+  h1 {
+    float:left; margin:0; line-height:40px;
+  }
 }
+
+#logout {
+  float:right; margin:0; line-height:40px;
+}
+
+#navbar {
+  float:left;
+  ul { 
+    list-style:none; margin:0 0 0 6em; padding:0;
+    li { 
+      float:left; line-height:40px; margin-right:1em;
+      a { padding: 0.3em 0.5em; border-radius: 4px; }
+    }
+
+    li.current {
+      a {
+        background: $red; color:white;
+      }
+    }
+  }
+}
+
+#main { clear:both }
