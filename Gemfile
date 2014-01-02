@@ -33,4 +33,5 @@ group :test do
   gem 'email_spec'
   gem 'turn', :require => false
   gem 'faker'
+  gem 'timecop'
 end

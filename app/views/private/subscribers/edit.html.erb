@@ -1,0 +1,14 @@
+<h1>Modifié l'abonné</h1>
+
+<%= form_for [:private, @subscriber] do |f| %>
+  <%= render "/shared/error_messages", :target => @subscriber %>
+  <div>
+    <%= f.label :email, "Email", class: "desc" %>
+    <%= f.email_field :email, placeholder: "son@email.com", size: 38 %>
+  </div>
+  <div>
+    <%= f.submit "Modifier" %>
+    <%= link_to "annuler", private_subscribers_path %>
+  </div>
+<% end %>
+

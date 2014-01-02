@@ -23,4 +23,13 @@ describe Subscriber do
     end
   end
 
+  describe "#validate!" do
+    it "set validated_at with the current time" do
+      subscriber = create(:subscriber)
+      Timecop.freeze
+      subscriber.validate!
+      expect(subscriber.validated_at).to eq(Time.now)
+    end
+  end
+
 end

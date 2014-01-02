@@ -1,1 +1,20 @@
 <h1>Abonnés</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Validé</th>
+    <th>Actions</th>
+  </tr>
+  <% for subscriber in @subscribers %>
+    <tr>
+      <td><%= subscriber.email %></td>
+      <td><%= SubscriberPresenter.new(subscriber).validated_at %></td>
+      <td>
+        <%= link_to "modifier", edit_private_subscriber_path(subscriber) %>
+        <%= link_to "valider", validate_private_subscriber_path(subscriber) %>
+        <%= link_to "supprimer", private_subscriber_path(subscriber), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>

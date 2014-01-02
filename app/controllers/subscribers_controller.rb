@@ -22,8 +22,8 @@ class SubscribersController < ApplicationController
 
   def validation
     @subscriber = Subscriber.find_by_token(params[:token])
-    logger.debug("SUBSCRIBERS : #{Subscriber.all.map{|s| "#{s.email} : #{s.token}"}}")
     if @subscriber
+      @subscriber.validate!
       redirect_to thanks_subscribers_path
     end
   end

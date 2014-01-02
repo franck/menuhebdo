@@ -42,6 +42,10 @@ feature "Subscription", %q{
   describe "#validation" do
     let!(:subscriber) { create(:subscriber) }
     context "when the token is good" do
+      it "sets the subscriber as validated" do
+        visit validation_subscribers_path(token: subscriber.token)
+        expect { subscriber.validated_at }.to_not be_nil
+      end
       it "redirect to the thanks page" do
         visit validation_subscribers_path(token: subscriber.token)
         page.should have_content "Abonnement activé"

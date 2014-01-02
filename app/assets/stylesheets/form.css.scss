@@ -4,6 +4,9 @@ form {
     margin-bottom:0.5em;
   }
 
+  label { font-weight:bold; }
+  label.desc { display: block; margin-bottom:0.5em; }
+
   input {
     display:inline-block;
     padding: 8px;

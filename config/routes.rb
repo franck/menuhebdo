@@ -8,7 +8,11 @@ Monmenuhebdo::Application.routes.draw do
   end
 
   namespace :private do
-    resources :subscribers
+    resources :subscribers do
+      member do
+        get :validate
+      end
+    end
     root to: 'subscribers#index'
   end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131231170102) do
+ActiveRecord::Schema.define(version: 20140102122807) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20131231170102) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "token"
+    t.datetime "validated_at"
   end
 
 end
