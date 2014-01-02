@@ -8,7 +8,9 @@
 </head>
 <body>
   <div id="container">
+    <%= render "shared/flashbox" %>
     <div id="header">
+      <div id="logout"><%= link_to "se deconnecter", destroy_admin_session_path, method: :delete %></div>
       <h1><a href='/'>Menu hebdo</a></h1>
     </div>
     <div id="main">
