@@ -1,6 +1,11 @@
 Monmenuhebdo::Application.routes.draw do
 
-  devise_for :admins, module: 'private'
+  devise_for :admins, module: 'private', skip: [:sessions]
+  as :admin do
+    get 'login' => 'private/sessions#new', as: :new_admin_session
+    post 'login' => 'private/sessions#create', as: :admin_session
+    delete 'logout' => 'private/sessions#destroy', as: :destroy_admin_session
+  end
 
   namespace :private do
     resources :subscribers
