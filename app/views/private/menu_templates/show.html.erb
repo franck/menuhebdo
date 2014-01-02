@@ -3,7 +3,19 @@
   <%= link_to "modifier", edit_private_menu_template_path(@menu_template) %>
 </div>
 
+<div id="menu">
+  <h1><%= @menu_template.title %></h1>
 
-<h1><%= @menu_template.title %></h1>
+  <% for day in @days %>
+    <div class="day">
+      <div class="day-header">
+        <h2><%= DayPresenter.new(day).name %></h2>
+        <%= link_to "supprimer", private_menu_template_day_path(@menu_template, day), method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<p>Détail du modèle.</p>
+<div class="clear">&nbsp;</div>
+
+<p><%= link_to "Ajouter un jour", new_private_menu_template_day_path(@menu_template), class: 'button' %></p>

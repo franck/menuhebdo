@@ -1,0 +1,8 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        menu_template:
+          attributes:
+            title:
+              blank: Il manque le titre du modèle

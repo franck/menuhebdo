@@ -10,4 +10,7 @@ FactoryGirl.define do
   factory :menu_template do
     title { Faker::Lorem.words(3).join(' ') }
   end
+  factory :day do
+
+  end
 end

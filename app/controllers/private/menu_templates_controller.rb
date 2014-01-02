@@ -7,6 +7,7 @@ module Private
 
     def show
       @menu_template = MenuTemplate.find(params[:id])
+      @days = @menu_template.days
     end
 
     def new

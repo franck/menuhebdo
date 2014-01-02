@@ -1,0 +1,12 @@
+#menu {
+  clear:both;
+  .day {
+    max-width:500px;
+    clear:both; margin-bottom:1em;
+    .day-header {
+      float:left; width:100%;
+      h2 { float:left; margin:0; line-height:40px; }
+      a { float:right; line-height:40px; }
+    }
+  }
+}

@@ -1,6 +1,10 @@
 # TODO
 
-- Menu creator
+Menu creation :
+- add/remove meals to days
+- add recipes to meals
+
+
 - Email menu
 - Unscubscribe
 - Modify email
