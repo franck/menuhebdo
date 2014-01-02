@@ -11,6 +11,7 @@
       <td><%= subscriber.email %></td>
       <td><%= SubscriberPresenter.new(subscriber).validated_at %></td>
       <td>
+        <%= link_to 'email', "mailto:#{subscriber.email}", target: '_blank' %>
         <%= link_to "modifier", edit_private_subscriber_path(subscriber) %>
         <%= link_to "valider", validate_private_subscriber_path(subscriber) %>
         <%= link_to "supprimer", private_subscriber_path(subscriber), method: :delete %>

@@ -1,7 +1,10 @@
 # TODO
 
-- Manage subscribers
+- Pagination
 - Menu creator
+- Email menu
+- Unscubscribe
+- Modify email
 
 
 MARKETING
