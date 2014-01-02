@@ -7,4 +7,7 @@ FactoryGirl.define do
     email { Faker::Internet.safe_email }
     password "mypassword"
   end
+  factory :menu_template do
+    title { Faker::Lorem.words(3).join(' ') }
+  end
 end

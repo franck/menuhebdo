@@ -1,0 +1,15 @@
+<h1>Nouveau modéle de menu</h1>
+
+<%= form_for [:private, @menu_template] do |f| %>
+  <%= render "shared/error_messages", target: @menu_template %>
+
+  <div>
+    <%= f.text_field :title, placeholder: "Titre du modèle", size: 35, autofocus: true %>
+    <%= f.submit "Suivant" %>
+  </div>
+
+  <div>
+    <%= link_to "annuler", private_menu_templates_path %>
+  </div>
+
+<% end %>

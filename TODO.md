@@ -1,6 +1,5 @@
 # TODO
 
-- Navbar
 - Menu creator
 - Email menu
 - Unscubscribe

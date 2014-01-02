@@ -1,0 +1,21 @@
+<h1>Menus</h1>
+
+<p><%= link_to "Ajouter un modèle de menu", new_private_menu_template_path, class: 'button' %></p>
+
+<table>
+  <tr>
+    <th>Titre du modèle</th>
+    <th>Actions</th>
+  </tr>
+  <% for template in @menu_template %>
+    <tr>
+      <td><%= template.title %></td>
+      <td>
+        <%= link_to "modifier", edit_private_menu_template_path(template) %>
+        <%= link_to "supprimer", private_menu_template_path(template), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @menu_template %>

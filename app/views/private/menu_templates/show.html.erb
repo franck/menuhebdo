@@ -1,0 +1,9 @@
+<div id="toplinks">
+  <%= link_to "&laquo&nbsp;modèles".html_safe, private_menu_templates_path %>
+  <%= link_to "modifier", edit_private_menu_template_path(@menu_template) %>
+</div>
+
+
+<h1><%= @menu_template.title %></h1>
+
+<p>Détail du modèle.</p>
