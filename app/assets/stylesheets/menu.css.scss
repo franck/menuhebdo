@@ -3,15 +3,16 @@
   clear:both;
   .day {
     max-width:500px;
-    clear:both; margin-bottom:1em;
+    clear:both; margin-bottom:2em;
     .day-header {
       float:left; width:100%;
-      h2 { float:left; margin:0; line-height:40px; }
-      a { float:right; line-height:40px; }
+      h2 { float:left; margin:0 1em 0 0; line-height:40px; }
+      a { float:left; line-height:40px; font-size:0.8em; }
     }
     .meal {
       margin-bottom: 0.5em;
       form { display:inline-block; }
+      a { font-size:0.8em; }
     }
   }
 }
