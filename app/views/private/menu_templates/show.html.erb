@@ -12,6 +12,15 @@
         <h2><%= DayPresenter.new(day).name %></h2>
         <%= link_to "supprimer", private_menu_template_day_path(@menu_template, day), method: :delete %>
       </div>
+      <div class="day-body">
+        <% for meal in day.meals %>
+          <div class="meal">
+            <strong><%= MealPresenter.new(meal).name %></strong>
+            <%= link_to "supprimer", private_day_meal_path(day, meal), method: :delete %>
+          </div>
+        <% end %>
+        <%= link_to "Ajouter un repas", new_private_day_meal_path(day) %>
+      </div>
     </div>
   <% end %>
 </div>

@@ -38,6 +38,4 @@ feature "Manage subscribers", %q{
     end
   end
 
-  scenario "I can add a subscriber"
-
 end

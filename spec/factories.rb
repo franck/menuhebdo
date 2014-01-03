@@ -11,6 +11,7 @@ FactoryGirl.define do
     title { Faker::Lorem.words(3).join(' ') }
   end
   factory :day do
-
+  end
+  factory :meal do
   end
 end

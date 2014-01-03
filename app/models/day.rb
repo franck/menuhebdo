@@ -1,5 +1,7 @@
 class Day < ActiveRecord::Base
   belongs_to :menu_template
+  has_many :meals, dependent: :destroy
+
   before_create :set_position
   after_destroy :reorder_position
 
