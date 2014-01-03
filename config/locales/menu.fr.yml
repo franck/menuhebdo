@@ -1,0 +1,8 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        recipe:
+          attributes:
+            name:
+              blank: Il manque le nom de la recette
