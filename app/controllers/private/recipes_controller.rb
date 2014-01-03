@@ -5,6 +5,11 @@ module Private
       @recipes = Recipe.paginate(page: params[:page])
     end
 
+    def search 
+      @recipes = Recipe.where("name like ?", "%#{params[:term]}%").limit(10).pluck(:name)
+      render json: @recipes
+    end
+
     def new
       @recipe = Recipe.new
     end

@@ -4,3 +4,6 @@ jQuery ->
 
   $(window).on 'unload', ->
     $('.recipe_name:focus').parents('form').submit()
+
+  $('.recipe_name').autocomplete
+    source: "/private/recipes/search"
