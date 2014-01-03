@@ -1,5 +1,6 @@
 class Meal < ActiveRecord::Base
   belongs_to :day
+  belongs_to :recipe
 
   before_create :set_position
   after_destroy :reorder_position

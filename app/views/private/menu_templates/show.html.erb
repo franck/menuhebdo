@@ -16,6 +16,9 @@
         <% for meal in day.meals %>
           <div class="meal">
             <strong><%= MealPresenter.new(meal).name %></strong>
+            <%= form_for [:private, meal, meal.recipe || meal.build_recipe], remote: true do |f| %>
+              <%= f.text_field :name, placeholder: "Nom de la recette", class: 'recipe_name', size: 35 %>
+            <% end %>
             <%= link_to "supprimer", private_day_meal_path(day, meal), method: :delete %>
           </div>
         <% end %>

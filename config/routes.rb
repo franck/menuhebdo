@@ -19,6 +19,9 @@ Monmenuhebdo::Application.routes.draw do
     resources :days do
       resources :meals
     end
+    resources :meals do
+      resources :recipes
+    end
     root to: 'subscribers#index'
   end
 

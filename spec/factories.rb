@@ -14,4 +14,7 @@ FactoryGirl.define do
   end
   factory :meal do
   end
+  factory :recipe do
+    name { Faker::Lorem.words(3).join(' ') }
+  end
 end
