@@ -8,6 +8,7 @@ Monmenuhebdo::Application.routes.draw do
   end
 
   namespace :private do
+    resources :recipes
     resources :subscribers do
       member do
         get :validate

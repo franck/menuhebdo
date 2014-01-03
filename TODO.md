@@ -1,10 +1,8 @@
 # TODO
 
 Menu creation :
-- design menu template show
-- find_or_create_by_name
-- autocomplete recipe
 - manage recipes
+- autocomplete recipe
 
 
 - Email menu

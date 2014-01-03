@@ -1,0 +1,19 @@
+<h1>Recettes</h1>
+
+<p><%= link_to "Ajouter une recette", new_private_recipe_path, class: 'button' %></p>
+
+<table>
+  <tr>
+    <th>Nom de la recette</th>
+    <th>Action</th>
+  </tr>
+  <% for recipe in @recipes %>
+    <tr>
+      <td><%= recipe.name %></td>
+      <td>
+        <%= link_to "modifier", edit_private_recipe_path(recipe) %>
+        <%= link_to "supprimer", private_recipe_path(recipe), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>

@@ -6,7 +6,8 @@ module Private::NavbarHelper
   def navbar_links(controller)
     links = [
       NavbarLink.new("Abonnés", private_subscribers_path, "private/subscribers"),
-      NavbarLink.new("Menus", private_menu_templates_path, "private/menu_templates")
+      NavbarLink.new("Menus", private_menu_templates_path, "private/menu_templates"),
+      NavbarLink.new("Recettes", private_recipes_path, "private/recipes")
     ]
 
     html = ""

@@ -54,8 +54,17 @@ feature "Meals in menu template", %q{
         find_field('recipe_name').value.should eq recipe.name
         fill_in "recipe_name", with: "Tournedos rosini"
         page.execute_script("$('input.recipe_name').trigger('DOMActivate').change().focusout();")
+        sleep 0.1
         visit private_menu_template_path(template1)
         find_field('recipe_name').value.should eq "Tournedos rosini"
+      end
+
+      scenario "unassociate recipe from meal when name is blank", js: true do
+        fill_in "recipe_name", with: ""
+        page.execute_script("$('input.recipe_name').trigger('DOMActivate').change().focusout();")
+        sleep 0.1
+        visit private_menu_template_path(template1)
+        find_field('recipe_name').value.should eq ""
       end
     end
   end

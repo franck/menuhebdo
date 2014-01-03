@@ -6,3 +6,4 @@ fr:
           attributes:
             name:
               blank: Il manque le nom de la recette
+              taken: Cet nom de recette est déjà pris
